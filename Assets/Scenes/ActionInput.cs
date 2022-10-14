@@ -6,25 +6,47 @@ using UnityEngine.XR;
 
 public class ActionInput : MonoBehaviour
 {
-    
+    private InputDevice targetDevice;
+    public List<GameObject> controllers;
+    public float speed = 1f;
+    public float maxspeed = 15f;
+    private float minspeed = 5f;
+    public GameObject player;
     void Start()
     {
         List<InputDevice> devices = new List<InputDevice>();
-        InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Left | InputDeviceCharacteristics.Controller;
+        InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
         InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics, devices);
 
         foreach (var item in devices)
         {
-            item.IsPressed
+            Debug.Log(item.name + item.characteristics);
         }
+
+        if(devices.Count > 0)
+        {
+            targetDevice = devices[0];
+     
+        }
+
 
     }
 
-
-
-
     void Update()
     {
+
         
+    }
+    void MovementSpeed()
+    {
+        targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue);
+
+        if (triggerValue > 0.105f)
+        {
+
+            speed = speed + 1f;
+            m_Rigidbody.velocity = transform.forward * speed;
+            Debug.Log(speed);
+        }
     }
 }

@@ -1135,8 +1135,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1110873188}
   - component: {fileID: 1110873187}
-  - component: {fileID: 1110873186}
   - component: {fileID: 1110873185}
+  - component: {fileID: 1110873186}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -1167,11 +1167,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1110873184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017c5e3933235514c9520e1dace2a4b2, type: 3}
+  m_Script: {fileID: 11500000, guid: b8951a1fc4433ad48809079d67553ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ActionAssets:
-  - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  controllers:
+  - {fileID: 1043448989}
+  - {fileID: 1721208068}
+  speed: 1
+  maxspeed: 15
 --- !u!114 &1110873187
 MonoBehaviour:
   m_ObjectHideFlags: 0
