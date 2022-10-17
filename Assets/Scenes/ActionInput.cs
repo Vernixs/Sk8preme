@@ -45,7 +45,7 @@ public class ActionInput : MonoBehaviour
         {
 
             speed = speed + 1f;
-            m_Rigidbody.velocity = transform.forward * speed;
+            /*.velocity = transform.forward * speed;*/
             Debug.Log(speed);
         }
     }
