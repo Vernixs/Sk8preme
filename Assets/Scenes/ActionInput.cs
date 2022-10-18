@@ -12,6 +12,10 @@ public class ActionInput : MonoBehaviour
     public float maxspeed = 15f;
     private float minspeed = 5f;
     public GameObject player;
+
+    public GameObject[] keyPoints;
+    int kpLevel = 0;
+
     void Start()
     {
         List<InputDevice> devices = new List<InputDevice>();
@@ -37,6 +41,7 @@ public class ActionInput : MonoBehaviour
 
         
     }
+
     void MovementSpeed()
     {
         targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue);
@@ -45,7 +50,7 @@ public class ActionInput : MonoBehaviour
         {
 
             speed = speed + 1f;
-            /*.velocity = transform.forward * speed;*/
+          
             Debug.Log(speed);
         }
     }
