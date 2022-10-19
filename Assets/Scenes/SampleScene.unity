@@ -2575,7 +2575,6 @@ GameObject:
   - component: {fileID: 1110873187}
   - component: {fileID: 1110873185}
   - component: {fileID: 1110873186}
-  - component: {fileID: 1110873189}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -2604,7 +2603,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110873184}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8951a1fc4433ad48809079d67553ea0, type: 3}
   m_Name: 
@@ -2633,7 +2632,7 @@ MonoBehaviour:
   m_Camera: {fileID: 1344503094}
   m_OriginBaseGameObject: {fileID: 1110873184}
   m_CameraFloorOffsetObject: {fileID: 1699229159}
-  m_RequestedTrackingOriginMode: 0
+  m_RequestedTrackingOriginMode: 1
   m_CameraYOffset: 0
 --- !u!4 &1110873188
 Transform:
@@ -2650,25 +2649,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1110873189
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110873184}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 977352edc91733b428ea26a798cfda5a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1266283514
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,7 +2851,6 @@ GameObject:
   - component: {fileID: 1344503094}
   - component: {fileID: 1344503093}
   - component: {fileID: 1344503092}
-  - component: {fileID: 1344503095}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3033,25 +3012,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!95 &1344503095
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1344503090}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 35b5afcf760919d4f8db4072bd4251d4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1672478963
 GameObject:
   m_ObjectHideFlags: 0
