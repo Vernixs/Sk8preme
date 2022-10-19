@@ -42,7 +42,7 @@ public class ActionInput : MonoBehaviour
 
         if (triggerValue > 0.105f)
         {
-                Debug.Log();
+                Debug.Log(anim);
         }
 
         
