@@ -8,13 +8,11 @@ public class ActionInput : MonoBehaviour
 {
     private InputDevice targetDevice;
     public List<GameObject> controllers;
-    public float speed = 1f;
-    public float maxspeed = 15f;
-    private float minspeed = 5f;
-    public GameObject player;
+    Animator anim;
+    public float newAnimationSpeed = 2f; 
 
-    public GameObject[] keyPoints;
-    int kpLevel = 0;
+   // public GameObject[] keyPoints;
+    //int kpLevel = 0;
 
     void Start()
     {
@@ -33,25 +31,27 @@ public class ActionInput : MonoBehaviour
      
         }
 
+        anim = gameObject.GetComponent<Animator>();
+
 
     }
 
     void Update()
     {
+        targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue);
 
+        if (triggerValue > 0.105f)
+        {
+                Debug.Log();
+        }
+
+        
+        anim.speed = newAnimationSpeed; 
         
     }
 
     void MovementSpeed()
     {
-        targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue);
 
-        if (triggerValue > 0.105f)
-        {
-
-            speed = speed + 1f;
-          
-            Debug.Log(speed);
-        }
     }
 }
