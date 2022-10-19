@@ -2611,12 +2611,7 @@ MonoBehaviour:
   controllers:
   - {fileID: 1043448989}
   - {fileID: 1721208068}
-  speed: 1
-  maxspeed: 15
-  player: {fileID: 0}
-  keyPoints:
-  - {fileID: 382335150}
-  - {fileID: 1751475832}
+  newAnimationSpeed: 2
 --- !u!114 &1110873187
 MonoBehaviour:
   m_ObjectHideFlags: 0
