@@ -49,9 +49,4 @@ public class ActionInput : MonoBehaviour
         anim.speed = newAnimationSpeed; 
         
     }
-
-    void MovementSpeed()
-    {
-
-    }
 }
