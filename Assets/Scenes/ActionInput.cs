@@ -16,6 +16,8 @@ public class ActionInput : MonoBehaviour
 
     void Start()
     {
+        anim = gameObject.GetComponent<Animator>();
+        anim.SetFloat("speed", 0.1f);
         List<InputDevice> devices = new List<InputDevice>();
         InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
         InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics, devices);
@@ -34,6 +36,7 @@ public class ActionInput : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
 
 
+
     }
 
     void Update()
@@ -42,7 +45,7 @@ public class ActionInput : MonoBehaviour
 
         if (triggerValue > 0.105f)
         {
-                Debug.Log(anim);
+            anim.speed += 1;
         }
 
         
