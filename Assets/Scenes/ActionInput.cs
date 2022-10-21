@@ -16,12 +16,12 @@ public class ActionInput : MonoBehaviour
 
     void Start()
     {
-        anim = gameObject.GetComponent<Animator>();
-        anim.SetFloat("speed", 0.1f);
+       // anim = gameObject.GetComponent<Animator>();
+        //anim.SetFloat("speed", 0.1f);
         List<InputDevice> devices = new List<InputDevice>();
         InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
         InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics, devices);
-
+        Debug.Log("hello");
         foreach (var item in devices)
         {
             Debug.Log(item.name + item.characteristics);
@@ -33,7 +33,7 @@ public class ActionInput : MonoBehaviour
      
         }
 
-        anim = gameObject.GetComponent<Animator>();
+        //anim = gameObject.GetComponent<Animator>();
 
 
 
@@ -45,11 +45,11 @@ public class ActionInput : MonoBehaviour
 
         if (triggerValue > 0.105f)
         {
-            anim.speed += 1;
+            Debug.Log(triggerValue);
         }
 
         
-        anim.speed = newAnimationSpeed; 
+       // anim.speed = newAnimationSpeed; 
         
     }
 }
